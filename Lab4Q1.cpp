@@ -6,11 +6,11 @@ class Human {
   string name;
  public:
   Human (string name)
-: name(name) {}
-  string getName() { return name; }
-  void shout() {
-    cout << "I'm a human. Name = " << name << "\n\n";
+    : name(name) {}
+  void shout()  {
+    cout << "I'm a human. Name = " << name << endl;
   }
+  string getName()  { return name; }
 };
 
 class Student : public Human {
