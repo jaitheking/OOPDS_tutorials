@@ -1,0 +1,8 @@
+#Lab Question 1#
+i)The vector increase its capacity when a new element is inserted.
+ii)For every 2^n new elements, the capacity doubles.
+iii)No.
+
+#Lab Question 2#
+Refer to main.cpp
+
