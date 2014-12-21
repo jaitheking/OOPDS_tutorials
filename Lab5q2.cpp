@@ -12,6 +12,7 @@ class Point{
     friend ostream& operator<< (ostream& os, Point& p);
     friend istream& operator>> (istream& is, Point& p);
     friend bool operator== (Point p1, Point p2);
+    friend Point operator+ (Point p1,Point p2);
 
 };
 istream& operator>> (istream& is, Point& p){
@@ -27,6 +28,11 @@ bool operator== (Point p1,Point p2){
     return p1.x==p2.x && p1.y ==p2.y;
 }
 
+Point operator+ (Point p1,Point p2){
+    int x = p1.x + p2.x;
+    int y = p1.y + p2.y;
+    return Point(x,y);
+}
 class SortByXY{
     public:
     bool operator()( Point p1, Point p2)
@@ -57,7 +63,7 @@ class SortByYX{
 
 int main() {
   vector<Point> v;
-  Point p;
+  Point p,p1,p2,p3;
   do {
     cout << "Input a Point (0 0 to end): ";
     cin >> p;
@@ -76,4 +82,7 @@ int main() {
   for (int i = 0; i < v.size(); i++)
     cout << v[i] << " ";
   cout << endl;
+
+
 }
+
